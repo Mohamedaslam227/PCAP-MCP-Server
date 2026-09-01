@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wifi-pcap-mcp"
+version = "0.1.0"
+description = "MCP server for Wi-Fi PCAP and PCAPNG analysis"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]==2.0.0",
+    "pyshark>=0.6,<1",
+]
+
+[project.scripts]
+wifi-pcap-mcp = "wifi_pcap_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["wifi_pcap_mcp*"]
