@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "wifiPcapAnalyzer": {
+      "type": "stdio",
+      "command": "C:\\Users\\Mohamed Aslam\\Learnings\\MCP\\WIFI-PCAP-mcp\\.venv-windows\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\Mohamed Aslam\\Learnings\\MCP\\WIFI-PCAP-mcp\\server.py"
+      ],
+      "cwd": "C:\\Users\\Mohamed Aslam\\Learnings\\MCP\\WIFI-PCAP-mcp"
+    }
+  }
+}
