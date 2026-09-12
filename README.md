@@ -6,7 +6,7 @@ PyShark, TShark, and Capinfos.
 ## Architecture
 
 ```text
-MCP presentation tools
+MCP API tools
         ↓
 application services
         ↓
@@ -20,14 +20,14 @@ The code uses a standard `src` package layout:
 ```text
 src/wifi_pcap_mcp/
 ├── server.py                 Composition and MCP runtime
-├── presentation/            Public tools and one error boundary
+├── api/                     MCP tools, responses, and the error boundary
 ├── application/services/    Capture, packet, analysis, and export workflows
 ├── domain/                  Models, repository contracts, typed errors
-├── infrastructure/          In-memory state, filesystem, TShark/Capinfos
+├── adapters/                Filesystem, repository, TShark, and Capinfos adapters
 └── config/                  Shared configuration constants
 ```
 
-Every registered tool passes through `presentation/error_boundary.py`. Expected
+Every registered tool passes through `api/error_boundary.py`. Expected
 application failures receive stable error codes, while unexpected failures are
 logged to stderr with an error ID and returned without a traceback. Successful
 and failed calls share this envelope:
