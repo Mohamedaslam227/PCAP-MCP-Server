@@ -5,7 +5,7 @@ import sys
 
 from mcp.server import MCPServer
 
-from wifi_pcap_mcp.presentation.tools import register_tools
+from wifi_pcap_mcp.api.tools import register_tools
 
 
 def create_server() -> MCPServer:
