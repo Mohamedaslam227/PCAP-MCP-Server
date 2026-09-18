@@ -111,3 +111,5 @@ From this directory, start the stdio server with either command:
 
 The command appears to wait without printing anything; that is normal for a
 stdio MCP server because it is waiting for an MCP client.
+
+[![M8ven Score](https://m8ven.ai/badge/mcp/mohamedaslam227/pcap-mcp-server)](https://m8ven.ai/mcp/mohamedaslam227/pcap-mcp-server)
